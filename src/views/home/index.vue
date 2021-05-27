@@ -2,7 +2,7 @@
 <template>
   <div class='page-home'>
     home
-    <van-icon class="iconfont" class-prefix='icon' name='yonghu' ></van-icon>
+    
   </div>
 </template>
 
