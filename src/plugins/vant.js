@@ -9,7 +9,8 @@ import {
     SwipeItem,
     Lazyload,
     Grid, 
-    GridItem
+    GridItem,
+    Image as VanImage,
 } from 'vant'
 Vue.use(Button);
 Vue.use(Tabbar);
@@ -21,3 +22,4 @@ Vue.use(SwipeItem);
 Vue.use(Lazyload);
 Vue.use(Grid);
 Vue.use(GridItem);
+Vue.use(VanImage);

@@ -34,6 +34,34 @@
       "unicode_decimal": 58894
     },
     {
+      "icon_id": "9271937",
+      "name": "7",
+      "font_class": "tianwuliyoutuihuo",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "9398650",
+      "name": "UE",
+      "font_class": "UE",
+      "unicode": "e750",
+      "unicode_decimal": 59216
+    },
+    {
+      "icon_id": "9605599",
+      "name": "施工图设计@1x",
+      "font_class": "shigongtushejix",
+      "unicode": "e6b3",
+      "unicode_decimal": 59059
+    },
+    {
+      "icon_id": "9926386",
+      "name": "进货车",
+      "font_class": "jinhuoche",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
       "icon_id": "11030869",
       "name": "搜索",
       "font_class": "sousuo",
