@@ -9,14 +9,21 @@
           <van-icon class="iconfont" class-prefix='icon' size="16" name='xiaoxi-saoyisao' color="#010101" ></van-icon>
       </div>
     </NavBar>
+    <div class="home-banner">
+      <HomeSwiper />
+      <HomeBannerItem />
+    </div>
   </div>
 </template>
 
 <script>
 import NavBar from "@/components/navBar"
+import { HomeSwiper,HomeBannerItem } from "./childe"
 export default {
   components: {
-    NavBar
+    NavBar,
+    HomeSwiper,
+    HomeBannerItem
   },
   data () {
     // 这里存放数据
@@ -44,5 +51,9 @@ export default {
 </script>
 
 <style lang='less' scoped>
-
+.page-home{
+  .home-banner{
+    background-color: #fff;
+  }
+}
 </style>
