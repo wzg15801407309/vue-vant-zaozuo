@@ -1,6 +1,6 @@
 @font-face {
   font-family: "iconfont"; /* Project id  */
-  src: url('iconfont.ttf?t=1622085548641') format('truetype');
+  src: url('iconfont.ttf?t=1622171002053') format('truetype');
 }
 
 .iconfont {
@@ -27,7 +27,15 @@
   content: "\e60e";
 }
 
+.icon-sousuo:before {
+  content: "\e64a";
+}
+
 .icon-user:before {
   content: "\e62c";
+}
+
+.icon-xiaoxi-saoyisao:before {
+  content: "\e631";
 }
 

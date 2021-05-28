@@ -1,15 +1,23 @@
 <!-- home -->
 <template>
   <div class='page-home'>
-    home
-    
+    <NavBar title="ZAOZUO造作新家">
+      <div slot="nav-right">
+          <van-icon class="iconfont" class-prefix='icon' name='sousuo' size="16" color='#010101'></van-icon>
+      </div>
+      <div slot="nav-left">
+          <van-icon class="iconfont" class-prefix='icon' size="16" name='xiaoxi-saoyisao' color="#010101" ></van-icon>
+      </div>
+    </NavBar>
   </div>
 </template>
 
 <script>
-
+import NavBar from "@/components/navBar"
 export default {
-  components: {},
+  components: {
+    NavBar
+  },
   data () {
     // 这里存放数据
     return {

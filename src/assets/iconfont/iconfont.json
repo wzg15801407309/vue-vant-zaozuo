@@ -34,11 +34,25 @@
       "unicode_decimal": 58894
     },
     {
+      "icon_id": "11030869",
+      "name": "搜索",
+      "font_class": "sousuo",
+      "unicode": "e64a",
+      "unicode_decimal": 58954
+    },
+    {
       "icon_id": "11543196",
       "name": "user",
       "font_class": "user",
       "unicode": "e62c",
       "unicode_decimal": 58924
+    },
+    {
+      "icon_id": "19480940",
+      "name": "消息-扫一扫",
+      "font_class": "xiaoxi-saoyisao",
+      "unicode": "e631",
+      "unicode_decimal": 58929
     }
   ]
 }
