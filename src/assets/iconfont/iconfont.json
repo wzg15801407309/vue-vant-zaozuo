@@ -1,0 +1,86 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1566359",
+      "name": "Tabbar_classify_sel",
+      "font_class": "Tabbar_classify_sel",
+      "unicode": "e642",
+      "unicode_decimal": 58946
+    },
+    {
+      "icon_id": "6830374",
+      "name": "cart",
+      "font_class": "cart",
+      "unicode": "e508",
+      "unicode_decimal": 58632
+    },
+    {
+      "icon_id": "7567937",
+      "name": "eye",
+      "font_class": "eye",
+      "unicode": "e7b8",
+      "unicode_decimal": 59320
+    },
+    {
+      "icon_id": "9209304",
+      "name": "home-icon",
+      "font_class": "home-icon",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    },
+    {
+      "icon_id": "9271937",
+      "name": "7",
+      "font_class": "tianwuliyoutuihuo",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "9398650",
+      "name": "UE",
+      "font_class": "UE",
+      "unicode": "e750",
+      "unicode_decimal": 59216
+    },
+    {
+      "icon_id": "9605599",
+      "name": "施工图设计@1x",
+      "font_class": "shigongtushejix",
+      "unicode": "e6b3",
+      "unicode_decimal": 59059
+    },
+    {
+      "icon_id": "9926386",
+      "name": "进货车",
+      "font_class": "jinhuoche",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
+      "icon_id": "11030869",
+      "name": "搜索",
+      "font_class": "sousuo",
+      "unicode": "e64a",
+      "unicode_decimal": 58954
+    },
+    {
+      "icon_id": "11543196",
+      "name": "user",
+      "font_class": "user",
+      "unicode": "e62c",
+      "unicode_decimal": 58924
+    },
+    {
+      "icon_id": "19480940",
+      "name": "消息-扫一扫",
+      "font_class": "xiaoxi-saoyisao",
+      "unicode": "e631",
+      "unicode_decimal": 58929
+    }
+  ]
+}
