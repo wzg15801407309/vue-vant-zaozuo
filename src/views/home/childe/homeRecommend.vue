@@ -36,6 +36,7 @@ export default {
       title:'618一键入手，打造理想新家',
       current:0,
       swipeList: [
+        
         {img:'http://tencentjiaju.img-cn-beijing.aliyuncs.com/ueditor/20210528/h1080w810-60b084672931e.jpg',bigname:"美术馆卧室",present:'莫兰迪色沉睡空间，安享纯净睡眠'},
         {img:'http://tencentjiaju.img-cn-beijing.aliyuncs.com/ueditor/20210528/h1080w810-60b084672931e.jpg',bigname:"美术馆卧室",present:'莫兰迪色沉睡空间，安享纯净睡眠'},
         {img:'http://tencentjiaju.img-cn-beijing.aliyuncs.com/ueditor/20210528/h1080w810-60b084672931e.jpg',bigname:"美术馆卧室",present:'莫兰迪色沉睡空间，安享纯净睡眠'},
