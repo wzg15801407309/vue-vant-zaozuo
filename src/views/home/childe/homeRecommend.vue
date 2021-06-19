@@ -10,14 +10,22 @@
         <span class="right-current">{{ this.current+1 }}</span>/<span class="right-total">{{ this.total }}</span>
       </div>
     </div>
-	<van-swipe :width="320" @change="onChange" :show-indicators=false>
+	<van-swipe :width="320" @change="onChange" :show-indicators=false   :loop=false>
 		<van-swipe-item v-for="(item, index) in swipeList" :key="index">
       <template #default>
         <div  class="swipe-content">
-          <img v-lazy="item.img" width="100%" />
+          <div class="swipe-content-up">
+            <img v-lazy="item.img" width="100%" />
+          </div>
           <div class="swipe-content-down">
-            <div class="swipe-word-big">{{item.bigname}}</div>
+            <div class="swipe-word-big">
+              <span>{{item.bigname}}</span>
+              <span class="big-right">¥553起</span>
+            </div>
             <div class="swipe-word">{{item.present}}</div>
+            <div v-show="item.colorchoice" class="swipe-color">
+                <span>{{item.colorchoice}}</span>
+            </div>
           </div>
         </div>
       </template>
@@ -38,11 +46,11 @@ export default {
       current:0,
       total:0,
       swipeList: [
-        {img:'http://tencentjiaju.img-cn-beijing.aliyuncs.com/ueditor/20210528/h1080w810-60b084672931e.jpg',bigname:"美术馆卧室",present:'莫兰迪色沉睡空间，安享纯净睡眠'},
+        {img:'http://tencentjiaju.img-cn-beijing.aliyuncs.com/ueditor/20210528/h1080w810-60b084672931e.jpg',bigname:"美术馆卧室",present:'莫兰迪色沉睡空间，安享纯净睡眠',colorchoice:"8 色可选"},
         {img:'http://nimg.ws.126.net/?url=http%3A%2F%2Fdingyue.ws.126.net%2F2021%2F0520%2F373419ccj00qtdg3b0024c000u000nmc.jpg&thumbnail=650x2147483647&quality=80&type=jpg',bigname:"美术馆卧室1",present:'莫兰迪色沉睡空间，安享纯净睡眠'},
-        {img:'http://tencentjiaju.img-cn-beijing.aliyuncs.com/ueditor/20210528/h1080w810-60b084672931e.jpg',bigname:"美术馆卧室2",present:'莫兰迪色沉睡空间，安享纯净睡眠'},
+        {img:'http://tencentjiaju.img-cn-beijing.aliyuncs.com/ueditor/20210528/h1080w810-60b084672931e.jpg',bigname:"美术馆卧室2",present:'莫兰迪色沉睡空间，安享纯净睡眠',colorchoice:"7色可选"},
         {img:'http://nimg.ws.126.net/?url=http%3A%2F%2Fdingyue.ws.126.net%2F2021%2F0520%2F373419ccj00qtdg3b0024c000u000nmc.jpg&thumbnail=650x2147483647&quality=80&type=jpg',bigname:"美术馆卧室1",present:'莫兰迪色沉睡空间，安享纯净睡眠'},
-        {img:'http://tencentjiaju.img-cn-beijing.aliyuncs.com/ueditor/20210528/h1080w810-60b084672931e.jpg',bigname:"美术馆卧室3",present:'莫兰迪色沉睡空间，安享纯净睡眠'},
+        {img:'http://tencentjiaju.img-cn-beijing.aliyuncs.com/ueditor/20210528/h1080w810-60b084672931e.jpg',bigname:"美术馆卧室3",present:'莫兰迪色沉睡空间，安享纯净睡眠', colorchoice:"3色可选"},
       ],
     } 
   },
@@ -102,25 +110,41 @@ export default {
         font-size: 13px;
       }
     }
-      
-
-
-
   }
   .swipe-content{
-    margin-right: 15px;
-    img{
-      height: 170px;
-      object-fit: cover;
+    margin-right: 10px;
+    .swipe-content-up{
+      overflow: hidden;
+      height: 180px;
+      position: relative;
+      img{
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+      }
     }
     .swipe-content-down{
       .swipe-word-big{
         font-size: 16px;
         font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        .big-right{
+          font-size: 13px;
+        }
       }
       .swipe-word{
         color: #9f9c9c;
         font-size: 14px;
+      }
+      .swipe-color{
+        padding: 5px 0;
+        span{
+          background-color: #F4F4F4;
+          padding: 2px 5px;
+          color: #929292;
+          font-size: 12px;
+        };
       }
     }
   }
