@@ -20,6 +20,8 @@ export default {
   /* text-align: center; */
   background-color: #f3f3f3;
   color: #2c3e50;
+  overflow:-Scroll;
+  overflow-x:hidden;
 }
 
 </style>

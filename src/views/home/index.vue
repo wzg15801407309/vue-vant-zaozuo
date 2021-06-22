@@ -14,18 +14,21 @@
       <HomeBannerItem />
     </div>
   <HomeRecommend />
+  <!-- 全品目录 -->
+  <HomeFullCatalog />
   </div>
 </template>
 
 <script>
 import NavBar from "@/components/navBar"
-import { HomeSwiper,HomeBannerItem,HomeRecommend } from "./childe"
+import { HomeSwiper,HomeBannerItem,HomeRecommend,HomeFullCatalog} from "./childe"
 export default {
   components: {
     NavBar,
     HomeSwiper,
     HomeBannerItem,
-    HomeRecommend
+    HomeRecommend,
+    HomeFullCatalog
   },
   data () {
     // 这里存放数据
@@ -54,6 +57,7 @@ export default {
 
 <style lang='less' scoped>
 .page-home{
+  margin-bottom: 50px;
   .home-banner{
     background-color: #fff;
     margin-bottom: 10px;
