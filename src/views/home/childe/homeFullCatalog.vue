@@ -79,7 +79,7 @@ export default {
     // border-bottom: 1px solid #D7D7D7;
   }
   .fullcatalog{
-    border-bottom: 1px solid #D7D7D7;
+    // border-bottom: 1px solid #D7D7D7;
     border-top: 1px solid #D7D7D7;
     .fullcatalog-head{
       padding-top: 20px;
