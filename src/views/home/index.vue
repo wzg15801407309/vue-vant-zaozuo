@@ -18,7 +18,17 @@
   <HomeFullCatalog />
   <!-- 百万用户 -->
   <HomeMillionUsers />
-  <!--  -->
+  <!-- 全国直营店 -->
+  <div class="home-shop">
+    <div class="title">全国直营门店</div>
+    <div class="home-shop-pos">
+      <van-image  width="100%" height="100%" src="https://p4.itc.cn/images01/20210602/ecbfceb16d53489ca5dca1ac36ca65d1.jpeg"/>
+      <div class="home-shop-text">
+          <div class="shop-text"><span>北京</span><span>上海</span><span>成都</span><span>...</span></div>
+          <div class="shop-text1">更多新店即将见面</div>
+      </div>
+    </div>
+  </div>
   <!-- footer -->
   <div class="home-footer">
     <div class="home-footer-line">
@@ -97,7 +107,34 @@ export default {
       font-weight: 500;   
     }
   }
-
+  .home-shop{
+    background-color: #fff;
+    padding: 20px  20px  0 20px;
+    .title{
+        font-size: 22px;
+        padding-top: 20px;
+        padding-bottom: 10px;
+        font-weight: bold;
+    }
+    .home-shop-pos{
+      position: relative;
+      .home-shop-text{
+        width: 100%;
+        color: #fff;
+        font-size: 22px;
+        font-weight: bold;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        transform:  translateY(-50%);
+        .shop-text{
+          span{
+            margin: 0 10px;
+          }
+        }
+      }
+    }
+  }
 
 }
 
