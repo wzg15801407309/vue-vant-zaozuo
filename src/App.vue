@@ -18,7 +18,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* text-align: center; */
-  background-color: #f3f3f3;
+  background-color: #f5f5f5;
   color: #2c3e50;
   overflow:-Scroll;
   overflow-x:hidden;
