@@ -16,7 +16,7 @@
               <div class="pos-right"> {{ item.site}}</div>
             </div>
          </van-grid-item>
-      </van-grid>
+        </van-grid>
        </div>
        <div class="millionUsers-footer">查看更多嗮单>></div>
     </div>

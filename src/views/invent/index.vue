@@ -1,12 +1,13 @@
 <!-- invent 发现-->
 <template>
   <div class='page-invent'>
-      <NavBar title="发现" />
-      <!-- tabs -->
-    <van-tabs animated title-inactive-color='#000' title-active-color='#000' @change="onChange" sticky>
+    <NavBar title="发现" />
+    <!-- tabs -->
+    <div class="invent-tabs">
+      <van-tabs animated title-inactive-color='#000' :swipeable='true' offset-top="46px" title-active-color='#000' @change="onChange" :sticky ='true'>
       <template v-for="(item,index) in tablists">
         <van-tab :key="index"  :title='item.title'  v-if="item.ID == '01'"  >
-          {{ item.title }}
+            <GuestsTabs />
         </van-tab>
         <van-tab  v-else :key="index"  :title='item.title'   >
           <van-grid :column-num="1">
@@ -21,15 +22,19 @@
         </van-tab>
       </template>
     </van-tabs>
+    </div>
+
   </div>
 </template>
 
 <script>
 import NavBar from "@/components/navBar"
+import { GuestsTabs } from "./childe"
 export default {
   name:'invent',
   components: {
-    NavBar
+    NavBar,
+    GuestsTabs
   },
   data () {
     // 这里存放数据
@@ -73,7 +78,7 @@ export default {
   methods: {
     onChange(index) {
       this.active=index;
-      console.log(index);
+      // console.log(index);
     },
   }
 }
