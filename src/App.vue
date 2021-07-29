@@ -5,12 +5,12 @@
   </div>
 </template>
 <script>
-import tabBar from '@/components/tabBar'
+import tabBar from "@/components/tabBar";
 export default {
-  components:{
-    tabBar
-  }
-}
+  components: {
+    tabBar,
+  },
+};
 </script>
 <style>
 #app {
@@ -20,8 +20,11 @@ export default {
   /* text-align: center; */
   background-color: #f5f5f5;
   color: #2c3e50;
-  overflow:-Scroll;
-  overflow-x:hidden;
+  /* overflow: -Scroll; */
+  overflow-x: hidden;
 }
-
+::-webkit-scrollbar {
+  /*隐藏滚轮*/
+  display: none;
+}
 </style>

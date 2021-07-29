@@ -1,22 +1,23 @@
 import Vue from "vue";
 import {
-    Button,
-    Tabbar, 
-    TabbarItem,
-    Icon,
-    NavBar,
-    Swipe, 
-    SwipeItem,
-    Lazyload,
-    Grid, 
-    GridItem,
-    Image as VanImage,
-    Tabs,
-    Tab,
-    Sticky,
-    PullRefresh,
-    List
-} from 'vant'
+  Button,
+  Tabbar,
+  TabbarItem,
+  Icon,
+  NavBar,
+  Swipe,
+  SwipeItem,
+  Lazyload,
+  Grid,
+  GridItem,
+  Image as VanImage,
+  Tabs,
+  Tab,
+  Sticky,
+  PullRefresh,
+  List,
+  Cell,
+} from "vant";
 Vue.use(Button);
 Vue.use(Tabbar);
 Vue.use(TabbarItem);
@@ -35,4 +36,4 @@ Vue.use(Tabs);
 Vue.use(Sticky);
 Vue.use(PullRefresh);
 Vue.use(List);
-
+Vue.use(Cell);
