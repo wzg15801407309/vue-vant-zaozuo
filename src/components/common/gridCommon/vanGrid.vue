@@ -166,7 +166,7 @@ export default {
     let screenWidth = document.body.offsetWidth; //屏幕宽度
     this.boxWidth = (screenWidth - 30 - this.boxMargin) / 2; //每个item的宽度
     // 数据请求
-    this.getDataList();
+    // this.getDataList();
   },
   // 方法集合
   methods: {
