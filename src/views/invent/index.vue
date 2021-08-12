@@ -156,7 +156,7 @@ export default {
   /deep/.van-grid-item__content {
     padding: 0;
     .van-image {
-      height: 220px;
+      // height: 220px;
     }
   }
   .invent-content {

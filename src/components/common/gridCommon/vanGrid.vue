@@ -1,15 +1,43 @@
 <!-- waterfall -->
 <template>
   <div class="waterfall-page">
-    <van-pull-refresh
-      v-model="isLoading"
-      @refresh="onRefresh"
-      style="min-height: 100vh"
-      :success-duration="800"
-      success-text="加载成功"
-      loading-text="加载中..."
+    <van-list
+      v-if="haveData == 2"
+      v-model="loading"
+      :finished="finished"
+      finished-text="没有更多了"
+      @load="onBottomLoad"
+      :offset="150"
+      :immediate-check="false"
     >
-    </van-pull-refresh>
+      <div class="waterfall-box" id="waterfall-box-id">
+        <div
+          class="waterfall-box-item"
+          v-for="(item, index) in dataList"
+          :key="index"
+          :style="{ width: boxWidth + 'px' }"
+        >
+          <img
+            class="data-cover"
+            :src="item.cover"
+            :style="{ width: '100%', height: item.imgHeight + 'px' }"
+          />
+          <div class="content-title">{{ item.sign }}</div>
+          <div class="content-footer">
+            <div class="pos-left">
+              <van-image
+                round
+                width="20"
+                height="20"
+                src="https://img01.yzcdn.cn/vant/cat.jpeg"
+              />
+              <span>{{ item.name }}</span>
+            </div>
+            <div class="pos-right">{{ item.site }}</div>
+          </div>
+        </div>
+      </div>
+    </van-list>
   </div>
 </template>
 
@@ -166,7 +194,7 @@ export default {
     let screenWidth = document.body.offsetWidth; //屏幕宽度
     this.boxWidth = (screenWidth - 30 - this.boxMargin) / 2; //每个item的宽度
     // 数据请求
-    // this.getDataList();
+    this.getDataList();
   },
   // 方法集合
   methods: {
@@ -214,7 +242,6 @@ export default {
       if (list.length >= this.pageSize) {
         // 说明还有下一页
         this.pageIndex++;
-        console.log(this.pageIndex);
       } else {
         // 当前页面的所有的数据都加载完成了
         this.finished = true;
@@ -239,7 +266,7 @@ export default {
     setItemElementPosition() {
       let parentEle = document.getElementById("waterfall-box-id");
       let boxEles = parentEle.getElementsByClassName("waterfall-box-item");
-      for (let i = 0; i < boxEles.length; i++) {
+      for (let i = this.itemCount; i < boxEles.length; i++) {
         const elem = boxEles[i];
         // 上一行的最小高度列索引
         let curColIndex = this.getMinHeightIndex(this.lastRowHeights);
@@ -279,7 +306,6 @@ export default {
       this.loadImagesHeight(tempList); //模拟预加载图片，获取图片高度
     },
     onBottomLoad() {
-      console.log("11111");
       //上拉加载更多
       if (this.finished) return; //说明所有数据已经加载完毕，返回
       this.getDataList(); //下一页数据请求中

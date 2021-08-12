@@ -53,7 +53,7 @@ export default {
   // 方法集合
   methods: {
 
-  }
+  },
 }
 </script>
 

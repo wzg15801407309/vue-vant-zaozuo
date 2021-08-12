@@ -82,6 +82,7 @@ export default {
 .page-guests {
   overflow: auto;
   margin-top: 68px;
+  height: calc(100vh - 118px);
   // margin-bottom: 50px;
   .van-tabs {
     /deep/.van-tabs__nav {
