@@ -17,6 +17,7 @@ import {
   PullRefresh,
   List,
   Cell,
+  TreeSelect,
 } from "vant";
 Vue.use(Button);
 Vue.use(Tabbar);
@@ -37,3 +38,4 @@ Vue.use(Sticky);
 Vue.use(PullRefresh);
 Vue.use(List);
 Vue.use(Cell);
+Vue.use(TreeSelect);
