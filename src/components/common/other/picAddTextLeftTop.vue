@@ -8,19 +8,6 @@
       <van-image :src="item.img" />
       <div class="words">{{ item.title }}</div>
     </div>
-    <div class="sub-page-item">1</div>
-    <div class="sub-page-item">1</div>
-    <div class="sub-page-item">1</div>
-    <div class="sub-page-item">1</div>
-    <div class="sub-page-item">1</div>
-    <div class="sub-page-item">1</div>
-    <div class="sub-page-item">1</div>
-    <div class="sub-page-item">1</div>
-    <div class="sub-page-item">1</div>
-    <!-- <div class="sub-page-item" v-for="item in listItem" :key="item.id">
-      <van-image :src="item.img" />
-      <div class="words">{{ item.title }}</div>
-    </div> -->
   </div>
 </template>
 
@@ -55,7 +42,7 @@ export default {
   },
   // 方法集合
   methods: {},
-}
+};
 </script>
 
 <style lang="less" scoped>

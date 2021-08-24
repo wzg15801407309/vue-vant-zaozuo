@@ -1,16 +1,26 @@
 <!-- sort -->
 <template>
   <div class="page-sort">
-    <!-- 导航条 -->
-    <MyNavBar>
-      <div slot="nav-title">
-        <van-field v-model="sms" center clearable @focus="onFocus">
-          <template #right-icon>
-            <van-icon name="search" color="#000" size="18" />
-          </template>
-        </van-field>
+    <NavBar title="ZAOZUO造作新家">
+      <div slot="nav-right">
+        <van-icon
+          class="iconfont"
+          class-prefix="icon"
+          name="sousuo"
+          size="16"
+          color="#010101"
+        ></van-icon>
       </div>
-    </MyNavBar>
+      <div slot="nav-left">
+        <van-icon
+          class="iconfont"
+          class-prefix="icon"
+          size="16"
+          name="xiaoxi-saoyisao"
+          color="#010101"
+        ></van-icon>
+      </div>
+    </NavBar>
     <van-tree-select
       height="100%"
       :items="items"
@@ -32,17 +42,14 @@
 </template>
 
 <script>
-import MyNavBar from "./childe/myNavBar.vue";
+import NavBar from "@/components/navBar";
 import { PicAddText, PicAddTextLeftTop } from "@/components/common/other";
 export default {
-  components: { MyNavBar, PicAddText, PicAddTextLeftTop },
+  components: { NavBar, PicAddText, PicAddTextLeftTop },
   data() {
     // 这里存放数据
     return {
-      sms: "",
       active: 0,
-      // 0:正常状态 1:搜索装态
-      navBarStatus: 0,
       items: [
         {
           text: "21年新品",
@@ -223,15 +230,7 @@ export default {
   // 生命周期 - 挂载完成（可以访问DOM元素）
   mounted() { },
   // 方法集合
-  methods: {
-    onFocus(val) {
-      //触发搜索框，进入另一个页面
-      console.log(val);
-    },
-    onCancel() {
-      alert("“取消”");
-    },
-  },
+  methods: {},
 };
 </script>
 
@@ -257,19 +256,6 @@ export default {
     }
     .van-tree-select__content {
       margin-top: 24px;
-    }
-  }
-  /deep/.van-hairline::afte {
-    color: #323233;
-  }
-  /deep/.van-nav-bar__title {
-    max-width: none;
-    width: 100%;
-  }
-  .van-cell {
-    line-height: 28px;
-    /deep/.van-field__body {
-      border-bottom: 1px solid;
     }
   }
 }
