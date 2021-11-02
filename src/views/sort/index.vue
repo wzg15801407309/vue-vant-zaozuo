@@ -6,28 +6,51 @@
       <div slot="nav-title">
         <van-field v-model="sms" center clearable @focus="onFocus">
           <template #right-icon>
+            <van-icon v-if="!isStausSms" name="search" color="#000" size="18" />
+            <span v-else @click="onCancel">取消</span>
+          </template>
+          <template v-if="isStausSms" #left-icon>
             <van-icon name="search" color="#000" size="18" />
           </template>
         </van-field>
       </div>
     </MyNavBar>
-    <van-tree-select
-      height="100%"
-      :items="items"
-      :main-active-index.sync="active"
-    >
-      <template #content>
-        <div v-if="active === 0 || active === 1">
-          <PicAddText
-            :listItem="items[active].itemsChl"
-            :color="items[active].color"
-          />
+    <template v-if="!isStausSms">
+      <van-tree-select
+        height="100%"
+        :items="items"
+        :main-active-index.sync="active"
+      >
+        <template #content>
+          <div v-if="active === 0 || active === 1">
+            <PicAddText
+              :listItem="items[active].itemsChl"
+              :color="items[active].color"
+            />
+          </div>
+          <div v-else>
+            <PicAddTextLeftTop
+              :listItem="items[active].itemsChl"
+              columnNum="2"
+            />
+          </div>
+        </template>
+      </van-tree-select>
+    </template>
+    <template v-else>
+      <div class="search-page-two">
+        <div class="page-two-title">热门搜索</div>
+        <div class="page-two-content">
+          <span
+            class="page-two-content-moudle"
+            v-for="(value, index) in searchArray"
+            :key="index"
+          >
+            <span>{{ value }}</span>
+          </span>
         </div>
-        <div v-else>
-          <PicAddTextLeftTop :listItem="items[active].itemsChl" columnNum="2" />
-        </div>
-      </template>
-    </van-tree-select>
+      </div>
+    </template>
   </div>
 </template>
 
@@ -212,6 +235,10 @@ export default {
           ],
         },
       ],
+      // 搜索框不同的状态
+      isStausSms: false,
+      // 搜索的热门词汇（要做搜索的历史纪录，我了解到要使用U技术）
+      searchArray: ["沙发", "新家卡", "云衫天丝新色", "美术管系列", "桌几", "美术管系列", "桌几"],
     };
   },
   // 监听属性 类似于data概念
@@ -226,10 +253,11 @@ export default {
   methods: {
     onFocus(val) {
       //触发搜索框，进入另一个页面
-      console.log(val);
+      console.log(val, "$$$$$$");
+      this.isStausSms = true;
     },
     onCancel() {
-      alert("“取消”");
+      this.isStausSms = false;
     },
   },
 };
@@ -270,6 +298,35 @@ export default {
     line-height: 28px;
     /deep/.van-field__body {
       border-bottom: 1px solid;
+    }
+    /deep/.van-field__left-icon {
+      margin-right: 0;
+      border-bottom: 1px solid;
+    }
+    /deep/.van-field__right-icon {
+      color: #323233;
+    }
+  }
+  .search-page-two {
+    margin-top: 46px;
+    padding: 10px 16px;
+    .page-two-title {
+      font-weight: bold;
+    }
+    .page-two-content {
+      font: 14px;
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      .page-two-content-moudle {
+        background-color: #f5f5f5;
+        margin-bottom: 10px;
+        margin-right: 8px;
+        color: #b3b3b3;
+        span {
+          padding: 4px;
+        }
+      }
     }
   }
 }
