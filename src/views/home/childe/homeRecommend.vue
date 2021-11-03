@@ -42,23 +42,23 @@
 
 <script>
 export default {
-  name: 'homeRecommend',
+  name: "homeRecommend",
   components: {},
   data() {
     // 这里存放数据
     return {
-      bigtitle: '造作经典空间组搭',
-      title: '618一键入手，打造理想新家',
+      bigtitle: "造作经典空间组搭",
+      title: "618一键入手，打造理想新家",
       current: 0,
       total: 0,
       swipeList: [
-        { img: 'http://tencentjiaju.img-cn-beijing.aliyuncs.com/ueditor/20210528/h1080w810-60b084672931e.jpg', bigname: "美术馆卧室", present: '莫兰迪色沉睡空间，安享纯净睡眠', colorchoice: "8 色可选" },
-        { img: 'http://nimg.ws.126.net/?url=http%3A%2F%2Fdingyue.ws.126.net%2F2021%2F0520%2F373419ccj00qtdg3b0024c000u000nmc.jpg&thumbnail=650x2147483647&quality=80&type=jpg', bigname: "美术馆卧室1", present: '莫兰迪色沉睡空间，安享纯净睡眠' },
-        { img: 'http://tencentjiaju.img-cn-beijing.aliyuncs.com/ueditor/20210528/h1080w810-60b084672931e.jpg', bigname: "美术馆卧室2", present: '莫兰迪色沉睡空间，安享纯净睡眠', colorchoice: "7色可选" },
-        { img: 'http://nimg.ws.126.net/?url=http%3A%2F%2Fdingyue.ws.126.net%2F2021%2F0520%2F373419ccj00qtdg3b0024c000u000nmc.jpg&thumbnail=650x2147483647&quality=80&type=jpg', bigname: "美术馆卧室1", present: '莫兰迪色沉睡空间，安享纯净睡眠' },
-        { img: 'http://tencentjiaju.img-cn-beijing.aliyuncs.com/ueditor/20210528/h1080w810-60b084672931e.jpg', bigname: "美术馆卧室3", present: '莫兰迪色沉睡空间，安享纯净睡眠', colorchoice: "3色可选" },
+        { img: "http://tencentjiaju.img-cn-beijing.aliyuncs.com/ueditor/20210528/h1080w810-60b084672931e.jpg", bigname: "美术馆卧室", present: "莫兰迪色沉睡空间，安享纯净睡眠", colorchoice: "8 色可选" },
+        { img: "http://nimg.ws.126.net/?url=http%3A%2F%2Fdingyue.ws.126.net%2F2021%2F0520%2F373419ccj00qtdg3b0024c000u000nmc.jpg&thumbnail=650x2147483647&quality=80&type=jpg", bigname: "美术馆卧室1", present: "莫兰迪色沉睡空间，安享纯净睡眠" },
+        { img: "http://tencentjiaju.img-cn-beijing.aliyuncs.com/ueditor/20210528/h1080w810-60b084672931e.jpg", bigname: "美术馆卧室2", present: "莫兰迪色沉睡空间，安享纯净睡眠", colorchoice: "7色可选" },
+        { img: "http://nimg.ws.126.net/?url=http%3A%2F%2Fdingyue.ws.126.net%2F2021%2F0520%2F373419ccj00qtdg3b0024c000u000nmc.jpg&thumbnail=650x2147483647&quality=80&type=jpg", bigname: "美术馆卧室1", present: "莫兰迪色沉睡空间，安享纯净睡眠" },
+        { img: "http://tencentjiaju.img-cn-beijing.aliyuncs.com/ueditor/20210528/h1080w810-60b084672931e.jpg", bigname: "美术馆卧室3", present: "莫兰迪色沉睡空间，安享纯净睡眠", colorchoice: "3色可选" },
       ],
-    }
+    };
   },
   // 监听属性 类似于data概念
   computed: {},
@@ -68,20 +68,16 @@ export default {
   created() {
     this.total = this.swipeList.length;
   },
-  // 生命周期 - 挂载完成（可以访问DOM元素）
-  mounted() {
-
-  },
   // 方法集合
   methods: {
     onChange(index) {
       this.current = index;
     },
-  }
-}
+  },
+};
 </script>
 
-<style lang='less'>
+<style lang="less">
 .homeRecommend {
   padding-left: 20px;
   position: relative;

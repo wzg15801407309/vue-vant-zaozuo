@@ -90,6 +90,7 @@ export default {
 <style lang="less" scoped>
 .page-home {
   margin-bottom: 50px;
+  background-color: #f5f5f5;
   .home-banner {
     background-color: #fff;
     margin-bottom: 10px;
