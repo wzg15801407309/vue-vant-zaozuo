@@ -253,7 +253,7 @@ export default {
   methods: {
     onFocus(val) {
       //触发搜索框，进入另一个页面
-      console.log(val, "$$$$$$");
+      console.log(val);
       this.isStausSms = true;
     },
     onCancel() {

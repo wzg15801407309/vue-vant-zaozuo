@@ -20,6 +20,9 @@ import {
   TreeSelect,
   Search,
   Field,
+  Form,
+  Row,
+  Col,
 } from "vant";
 Vue.use(Button);
 Vue.use(Tabbar);
@@ -43,3 +46,6 @@ Vue.use(Cell);
 Vue.use(TreeSelect);
 Vue.use(Search);
 Vue.use(Field);
+Vue.use(Form);
+Vue.use(Row);
+Vue.use(Col);
