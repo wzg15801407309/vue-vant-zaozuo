@@ -23,6 +23,7 @@ import {
   Form,
   Row,
   Col,
+  Uploader,
 } from "vant";
 Vue.use(Button);
 Vue.use(Tabbar);
@@ -49,3 +50,4 @@ Vue.use(Field);
 Vue.use(Form);
 Vue.use(Row);
 Vue.use(Col);
+Vue.use(Uploader);
