@@ -40,7 +40,8 @@
         <van-list v-model="loading" @load="onLoad">
           <van-cell v-for="item in list" :key="item">
             <div class="cell-item">
-              <span>{{ item }}</span> <van-icon name="arrow" />
+              <span>{{ item }}</span>
+              <van-icon size="16px" color="#000" name="arrow" />
             </div>
           </van-cell>
         </van-list>
@@ -138,6 +139,8 @@ export default {
       /deep/.van-cell {
         padding: 10px 0px;
         .cell-item {
+          color: #000;
+          font-size: 16px;
           display: flex;
           justify-content: space-between;
           align-items: center;
